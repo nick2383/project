@@ -31,7 +31,7 @@ int sc_main(int argc , char *argv[])
 	DH_HW_MULT.out_data_high (result2);	// result2 to software
 	DH_HW_MULT.hw_mult_enable (enable);	// enable hardware
 	DH_HW_MULT.hw_mult_done (done);		// hardware done
-	DH_HW_MULT.clock (clk)				// hardware clock
+	DH_HW_MULT.clock (clk);				// hardware clock
 
 	sc_start();
 

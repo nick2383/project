@@ -21,12 +21,12 @@ SC_MODULE (dh_hw_mult)
   //*************
   // Added Ports
   //*************
-  sc_in<sc_logic> reset; // reset port
   sc_in_clk clock;   // clock input
 
   //**************
   // Added Signals
   //**************
+  sc_in<sc_logic> reset; // reset signal
   sc_signal<ctrl_state> state, next_state;  // state machine signals
 
   //**************
