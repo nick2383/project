@@ -26,7 +26,7 @@ SC_MODULE (dh_hw_mult)
   //**************
   // Added Signals
   //**************
-  sc_in<sc_logic> reset; // reset signal
+  sc_signal<sc_logic> reset; // reset signal
   sc_signal<ctrl_state> state, next_state;  // state machine signals
 
   //**************
