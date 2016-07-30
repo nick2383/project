@@ -66,11 +66,13 @@ void dh_hw_mult::state_output() {
   
   switch (state.read()) {
 
-    case S0_WAIT: 
+    case S0_WAIT:
+        // deassert DONE 
         hw_mult_done.write(false);
         break;
   
     case S1_EXECUTE:
+        // do multiplication
         // Read inputs  
         b = in_data_1.read();
         c = in_data_2.read();
@@ -98,10 +100,12 @@ void dh_hw_mult::state_output() {
         break;
 
     case S2_OUTPUT:
+        // assert DONE
         hw_mult_done.write(true);
         break;
 
     case S3_FINISH:
+        // keep DONE asserted
         hw_mult_done.write(true);
         break;
   
