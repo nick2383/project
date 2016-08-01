@@ -12,6 +12,13 @@ SC_MODULE (dh_hw_mult)
   sc_in<bool> hw_mult_enable; 
   sc_in<NN_DIGIT> in_data_1;
   sc_in<NN_DIGIT> in_data_2;
+
+  sc_out<NN_DIGIT> multiplier;
+  sc_out<NN_DIGIT> multiplicand;
+  sc_out<sc_logic> reset_mult, START;
+  sc_in<sc_logic>FINISH;  
+  sc_in<NN_DIGIT> product;
+
   sc_out<NN_DIGIT> out_data_low;
   sc_out<NN_DIGIT> out_data_high;
   sc_out<bool> hw_mult_done;
